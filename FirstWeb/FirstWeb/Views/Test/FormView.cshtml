@@ -32,7 +32,23 @@
 <h2>AddView</h2>
 
 <div>
-    <form>
-
-        </form>
+    <form action="/Test/SaveEmployee" method="post">
+        <fieldset>
+            <legend>Employee</legend>
+            <ol>
+            <label>firstname</label>
+            <input type="text" id="TxtFirst" name="FirstName" value="@Model.FirstName"/>
+            <</ol>>
+            <ol>
+            <label>lastname<</label>>
+            <input type="text" id="TxtLast" name="LastName" value="@Model.LastName">
+                <</ol>>
+            <ol>
+                <label>Salary:</label>
+                <input type="text" id="TxtSalary" name="Salary" value="@Model.Salary" />
+                @Html.ValidationMessage("Salary")
+                <br />
+            </ol>
+            </fieldset>
+</form>
 </div>
