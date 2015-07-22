@@ -1,0 +1,30 @@
+﻿@using FirstWeb.ViewModels
+
+@{
+    ViewBag.Title = "MyView";
+}
+
+<h2>MyView</h2>
+<a href="/Test/AddNew"> add a new employee </a>
+<div>
+    <hr />
+    <div>
+        <table>
+            <tr>
+                <th>Employee Name</th>
+                <th>Salary</th>
+
+            </tr>
+
+            @foreach (var emps in Model.Employees)
+            {
+
+                <tr>
+                    <td> @emps.EmployeeName </td>
+                    <td style="background-color:@emps.SalaryColor">@emps.Salary</td>
+                </tr>
+            }
+        </table>
+    </div>
+     number of employees' salary above 3000 is @Model.NumberOfEmployeesAbove15000 
+</div>
